@@ -1,7 +1,14 @@
 body {
+  margin: 0 auto;
   background-color: beige;
 }
 
 .container {
-  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }

@@ -6,7 +6,12 @@ body {
 .container {
 }
 
-.header {
+h1 {
+  font-weight: 600;
+  font-family: sans-serif;
+  padding: 30px 60px;
+  background-color: rgb(33, 37, 41);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;

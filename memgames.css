@@ -19,11 +19,25 @@ h1 {
   margin: auto;
 }
 
-h4 {
-  border: 1px solid black;
-  width: 80px;
-  height: auto;
-  padding: 20px;
+.scores {
+  font-size: medium;
+  font-family: sans-serif;
+  align-items: center;
   display: flex;
   justify-content: center;
+  margin-bottom: 1.6rem;
+  gap: 70px;
+  padding: 2rem;
+}
+
+h4 {
+  border-radius: 15px;
+  background-color: rgba(136, 255, 0, 0.863);
+  width: 100px;
+  height: auto;
+  padding: 20px;
+}
+
+.CS {
+  background-color: #ead2ff;
 }

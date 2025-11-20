@@ -50,8 +50,8 @@ h4 {
 .card {
   margin: 0 auto;
   border: 0.5px solid black;
-  width: 8rem;
-  height: 14rem;
+  width: 7rem;
+  height: 12rem;
   border-radius: 20px;
   box-shadow: 10px 5px rgba(0, 0, 4, 0.718);
   transition: transform 0.2s ease;

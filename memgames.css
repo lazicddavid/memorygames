@@ -54,9 +54,10 @@ h4 {
   height: 14rem;
   border-radius: 20px;
   box-shadow: 10px 5px rgba(0, 0, 4, 0.718);
-  transition: transform 0.2s ease; /* glatka animacija */
+  transition: transform 0.2s ease;
 }
 
 .card:hover {
   transform: scale(1.05); /* blago uvećanje 5% */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }

@@ -25,9 +25,9 @@ h1 {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
   gap: 5rem;
-  padding: 2rem auto;
+  padding-top: 2rem;
 }
 
 h4 {

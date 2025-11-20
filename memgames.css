@@ -41,3 +41,25 @@ h4 {
 .CS {
   background-color: #ead2ff;
 }
+
+.card-container {
+  padding: 30px 10px;
+  margin: 0 auto;
+  justify-content: center;
+  grid-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  margin: 0 auto;
+  border: 1px solid blue;
+  width: 8rem;
+  height: 14rem;
+  border-radius: 20px;
+  box-shadow: 10px 5px rgba(0, 0, 255, 0.436);
+}
+
+.card:hover {
+  cursor: ;
+}

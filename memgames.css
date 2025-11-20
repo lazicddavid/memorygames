@@ -26,8 +26,8 @@ h1 {
   display: flex;
   justify-content: center;
   margin-bottom: 1.6rem;
-  gap: 70px;
-  padding: 2rem;
+  gap: 5rem;
+  padding: 2rem auto;
 }
 
 h4 {

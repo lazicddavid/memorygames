@@ -39,6 +39,7 @@ h4 {
 }
 
 .card-container {
+  max-width: 900px;
   padding: 4rem 2rem;
   margin: 0 auto;
   justify-items: center;

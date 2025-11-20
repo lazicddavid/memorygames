@@ -49,13 +49,14 @@ h4 {
 
 .card {
   margin: 0 auto;
-  border: 1px solid blue;
+  border: 0.5px solid black;
   width: 8rem;
   height: 14rem;
   border-radius: 20px;
-  box-shadow: 10px 5px rgba(0, 0, 255, 0.436);
+  box-shadow: 10px 5px rgba(0, 0, 4, 0.718);
+  transition: transform 0.2s ease; /* glatka animacija */
 }
 
 .card:hover {
-  transform: perspective();
+  transform: scale(1.05); /* blago uvećanje 5% */
 }

@@ -4,7 +4,7 @@
 
 body {
   margin: 0 auto;
-  background-color: beige;
+  background-color: white;
 }
 
 h1 {
@@ -38,12 +38,8 @@ h4 {
   padding: 20px;
 }
 
-.CS {
-  background-color: #ead2ff;
-}
-
 .card-container {
-  padding: 30px 10px;
+  padding: 4rem 2rem;
   margin: 0 auto;
   justify-content: center;
   grid-gap: 30px;
@@ -61,5 +57,5 @@ h4 {
 }
 
 .card:hover {
-  cursor: ;
+  transform: perspective();
 }

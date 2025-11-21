@@ -1,23 +1,31 @@
-const cards [
-  {id:1, name:, isClicked: false, }
-  {id:2, name:, isClicked: false, }
-  {id:3, name:, isClicked: false, }
-  {id:4, name:, isClicked: false, }
-  {id:5, name:, isClicked: false, }
-
+const cards = [
+  { id: 1, isClicked: false },
+  { id: 2, isClicked: false },
+  { id: 3, isClicked: false },
+  { id: 4, isClicked: false },
+  { id: 5, isClicked: false },
+  { id: 6, isClicked: false },
+  { id: 7, isClicked: false },
+  { id: 8, isClicked: false },
+  { id: 9, isClicked: false },
+  { id: 10, isClicked: false },
+  { id: 11, isClicked: false },
+  { id: 12, isClicked: false },
 ];
+console.log(cards);
 
 let currentScore = 0;
 let highScore = 0;
 
 let clickedCards = [];
-
-
-clickedCards.push(ID)
+//ovaj araray cuva kartice koje su kliknute, id
+//ako se klikne na ist karticu, game over, return
+clickedCards.push(id)
 currentScore++
+//ako nije kliknuta, nastavak igre i povecane skora
 
-ako currentScore > highScore → update highScore
-promesati karte
+currentScore > highScore → update highScore
+promesa karte //?
 update()
 
 console.log(cards);

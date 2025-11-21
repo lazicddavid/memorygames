@@ -9,3 +9,5 @@ const cards [
 
 let currentScore = 0;
 let highScore = 0;
+
+let clickedCards = [];

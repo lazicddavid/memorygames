@@ -11,3 +11,13 @@ let currentScore = 0;
 let highScore = 0;
 
 let clickedCards = [];
+
+
+clickedCards.push(ID)
+currentScore++
+
+ako currentScore > highScore → update highScore
+promesati karte
+update()
+
+console.log(cards);

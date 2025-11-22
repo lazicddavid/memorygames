@@ -30,3 +30,5 @@ update()
 
 console.log(cards);
 currentScore++
+
+clickedCards()

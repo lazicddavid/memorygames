@@ -29,3 +29,5 @@ promesa karte //?
 update()
 
 console.log(cards);
+
+update()

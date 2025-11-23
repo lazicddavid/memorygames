@@ -1,4 +1,4 @@
-const cards = [
+/*const cards = [
   { id: 1, isClicked: false },
   { id: 2, isClicked: false },
   { id: 3, isClicked: false },
@@ -27,3 +27,26 @@ currentScore++
 currentScore > highScore → update highScore
 promesa karte //?
 update()
+*/
+function createCard(id) {
+  return {
+    id: id,
+    isClicked: false,
+
+    getId() {
+      return this.id;
+    },
+
+    setId(newId) {
+      this.id = newId;
+    },
+
+    getIsClicked() {
+      return this.isClicked;
+    },
+
+    changeIsClicked() {
+      this.isClicked = !this.isClicked;
+    },
+  };
+}

@@ -66,6 +66,7 @@ h4 {
 .card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 20px; /* da prati oblik kartice */
+  object-fit: contain;
+  border-radius: 20px;
+  padding: 10px;
 }

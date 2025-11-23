@@ -50,3 +50,15 @@ function createCard(id) {
     },
   };
 }
+
+const cardManager = {
+  cards: [],
+
+  addCard(card) {
+    this.cards.push(card);
+  },
+
+  getCards() {
+    return this.cards;
+  },
+};

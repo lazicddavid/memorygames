@@ -13,7 +13,7 @@ const cards = [
   { id: 12, isClicked: false },
 ];
 console.log(cards);
-
+/*
 let currentScore = 0;
 let highScore = 0;
 
@@ -26,9 +26,4 @@ currentScore++
 
 currentScore > highScore → update highScore
 promesa karte //?
-update()
-
-console.log(cards);
-currentScore++
-
-clickedCards()
+update()*/

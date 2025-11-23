@@ -77,3 +77,8 @@ const cards = [
   { id: 11, isClicked: false },
   { id: 12, isClicked: false },
 ];
+
+cards.forEach((cardData) => {
+  const newCard = createCard(cardData.id);
+  cardManager.addCard(newCard);
+});

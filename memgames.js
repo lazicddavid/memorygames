@@ -28,6 +28,17 @@ currentScore > highScore → update highScore
 promesa karte //?
 update()
 */
+
+const DOMelements = {
+  cardElements: document.querySelectorAll(".card"),
+  currentScoreSpan: document.querySelector(".paragraph1 span"),
+  highScoreSpan: document.querySelector(".paragraph2 span"),
+};
+
+DOMelements.cardElements.forEach((cardElements) => {
+  cardElements.addEventListener("click", handleCardClick);
+});
+
 function createCard(id) {
   return {
     id: id,
@@ -58,10 +69,10 @@ const cardManager = {
     this.cards.push(card);
   },
 
-  getCards() {
-    return this.cards;
-  },
-};
+getCardById(id) {
+  return this.cards.find((card) => card.getId() === id);
+}
+
 
 const cards = [
   { id: 1, isClicked: false },

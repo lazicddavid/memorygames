@@ -63,18 +63,7 @@ function createCard(id) {
 }
 
 const cardManager = {
-  cards: [],
-
-  addCard(card) {
-    this.cards.push(card);
-  },
-
-getCardById(id) {
-  return this.cards.find((card) => card.getId() === id);
-}
-
-
-const cards = [
+  cards: const cards = [
   { id: 1, isClicked: false },
   { id: 2, isClicked: false },
   { id: 3, isClicked: false },
@@ -87,7 +76,18 @@ const cards = [
   { id: 10, isClicked: false },
   { id: 11, isClicked: false },
   { id: 12, isClicked: false },
-];
+],
+
+  addCard(card) {
+    this.cards.push(card);
+  },
+
+getCardById(id) {
+  return this.cards.find((card) => card.getId() === id);
+}
+};
+
+
 
 cards.forEach((cardData) => {
   const newCard = createCard(cardData.id);

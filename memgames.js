@@ -35,6 +35,36 @@ const DOMelements = {
   highScoreSpan: document.querySelector(".paragraph2 span"),
 };
 
+const cardManager = {
+  cards: [
+    { id: 1, isClicked: false },
+    { id: 2, isClicked: false },
+    { id: 3, isClicked: false },
+    { id: 4, isClicked: false },
+    { id: 5, isClicked: false },
+    { id: 6, isClicked: false },
+    { id: 7, isClicked: false },
+    { id: 8, isClicked: false },
+    { id: 9, isClicked: false },
+    { id: 10, isClicked: false },
+    { id: 11, isClicked: false },
+    { id: 12, isClicked: false },
+  ],
+
+  addCard(card) {
+    this.cards.push(card);
+  },
+
+  getCardById(id) {
+    return this.cards.find((card) => card.getId() === id);
+  },
+};
+
+
+  currentScore: 0,
+  highScore: 0,
+
+
 DOMelements.cardElements.forEach((cardElements) => {
   cardElements.addEventListener("click", handleCardClick);
 });
@@ -61,33 +91,6 @@ function createCard(id) {
     },
   };
 }
-
-const cardManager = {
-  cards: const cards = [
-  { id: 1, isClicked: false },
-  { id: 2, isClicked: false },
-  { id: 3, isClicked: false },
-  { id: 4, isClicked: false },
-  { id: 5, isClicked: false },
-  { id: 6, isClicked: false },
-  { id: 7, isClicked: false },
-  { id: 8, isClicked: false },
-  { id: 9, isClicked: false },
-  { id: 10, isClicked: false },
-  { id: 11, isClicked: false },
-  { id: 12, isClicked: false },
-],
-
-  addCard(card) {
-    this.cards.push(card);
-  },
-
-getCardById(id) {
-  return this.cards.find((card) => card.getId() === id);
-}
-};
-
-
 
 cards.forEach((cardData) => {
   const newCard = createCard(cardData.id);

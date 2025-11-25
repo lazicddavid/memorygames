@@ -51,24 +51,43 @@ const cardManager = {
     { id: 12, isClicked: false },
   ],
 
-  addCard(card) {
-    this.cards.push(card);
-  },
-
-  getCardById(id) {
-    return this.cards.find((card) => card.getId() === id);
-  },
-};
-
-
   currentScore: 0,
   highScore: 0,
 
+  getCardById(id) {
+    return this.cards.find((card) => card.id === id);
+  },
 
-DOMelements.cardElements.forEach((cardElements) => {
-  cardElements.addEventListener("click", handleCardClick);
-});
+  clickCard(id) {
+    const card = this.getCardById(id);
 
+    if (card.isClicked) {
+      this.gameOver();
+      return;
+    }
+
+    card.isClicked = true;
+    this.currentScore++;
+
+    if (this.currentScore > this.highScore) {
+      this.highScore = this.currentScore;
+    }
+
+    this.shuffleCards();
+    updateUI();
+  },
+
+  shuffleCards() {
+    this.cards.sort(() => Math.random() - 0.5);
+  },
+
+  gameOver() {
+    this.currentScore = 0;
+    this.cards.forEach((card) => (card.isClicked = false));
+    showGameOver();
+    update();
+  },
+};
 function createCard(id) {
   return {
     id: id,

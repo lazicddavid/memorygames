@@ -33,6 +33,7 @@ const DOMelements = {
   cardElements: document.querySelectorAll(".card"),
   currentScoreSpan: document.querySelector(".paragraph1 span"),
   highScoreSpan: document.querySelector(".paragraph2 span"),
+  cardContainer: document.querySelector(".card-container"),
 };
 
 const cardManager = {

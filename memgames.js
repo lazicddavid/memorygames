@@ -1,34 +1,3 @@
-/*const cards = [
-  { id: 1, isClicked: false },
-  { id: 2, isClicked: false },
-  { id: 3, isClicked: false },
-  { id: 4, isClicked: false },
-  { id: 5, isClicked: false },
-  { id: 6, isClicked: false },
-  { id: 7, isClicked: false },
-  { id: 8, isClicked: false },
-  { id: 9, isClicked: false },
-  { id: 10, isClicked: false },
-  { id: 11, isClicked: false },
-  { id: 12, isClicked: false },
-];
-console.log(cards);
-
-let currentScore = 0;
-let highScore = 0;
-
-let clickedCards = [];
-//ovaj araray cuva kartice koje su kliknute, id
-//ako se klikne na ist karticu, game over, return
-clickedCards.push(id)
-currentScore++
-//ako nije kliknuta, nastavak igre i povecane skora
-
-currentScore > highScore → update highScore
-promesa karte //?
-update()
-*/
-
 const DOMelements = {
   cardElements: document.querySelectorAll(".card"),
   currentScoreSpan: document.querySelector(".paragraph1 span"),
@@ -38,18 +7,18 @@ const DOMelements = {
 
 const cardManager = {
   cards: [
-    { id: 1, isClicked: false },
-    { id: 2, isClicked: false },
-    { id: 3, isClicked: false },
-    { id: 4, isClicked: false },
-    { id: 5, isClicked: false },
-    { id: 6, isClicked: false },
-    { id: 7, isClicked: false },
-    { id: 8, isClicked: false },
-    { id: 9, isClicked: false },
-    { id: 10, isClicked: false },
-    { id: 11, isClicked: false },
-    { id: 12, isClicked: false },
+    { id: 1, src: "abraham.png", isClicked: false },
+    { id: 2, src: "bird.png", isClicked: false },
+    { id: 3, src: "coach feeatu.png", isClicked: false },
+    { id: 4, src: "doofus rick.png", isClicked: false },
+    { id: 5, src: "gear head.png", isClicked: false },
+    { id: 6, src: "michel.png", isClicked: false },
+    { id: 7, src: "president.png", isClicked: false },
+    { id: 8, src: "prince nebulon.png", isClicked: false },
+    { id: 9, src: "rick sanchez.png", isClicked: false },
+    { id: 10, src: "scary terry.png", isClicked: false },
+    { id: 11, src: "snuffles.png", isClicked: false },
+    { id: 12, src: "squanchy.png", isClicked: false },
   ],
   currentScore: 0,
   highScore: 0,
@@ -84,15 +53,18 @@ const cardManager = {
   gameOver() {
     this.currentScore = 0;
     this.cards.forEach((card) => (card.isClicked = false));
-    showGameOver();
     updateGame();
   },
 };
 
-function handleCardClick(e) {
-  const id = Number(e.target.dataset.id);
+function onCardClick(e) {
+  const cardDiv = e.target.closest(".card");
+  if (!cardDiv) return;
+
+  const id = Number(cardDiv.dataset.id);
   cardManager.clickCard(id);
 }
+
 function updateGame() {
   DOMelements.currentScoreSpan.textContent = cardManager.currentScore;
   DOMelements.highScoreSpan.textContent = cardManager.highScore;
@@ -105,10 +77,9 @@ function updateGame() {
 
     const img = document.createElement("img");
     img.src = card.src;
-    img.alt = card.src;
 
     div.appendChild(img);
-    div.addEventListener("click", handleCardClick);
+    div.addEventListener("click", onCardClick);
 
     DOMelements.cardContainer.appendChild(div);
   });

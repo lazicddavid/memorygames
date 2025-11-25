@@ -55,6 +55,7 @@ h4 {
   border-radius: 20px;
   box-shadow: 10px 5px rgba(0, 0, 4, 0.718);
   transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
 .card:hover {

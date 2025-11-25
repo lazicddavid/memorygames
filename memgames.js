@@ -98,14 +98,20 @@ function updateGame() {
   DOMelements.highScoreSpan.textContent = cardManager.highScore;
 
   DOMelements.cardContainer.innerHTML = "";
-
   cardManager.cards.forEach((card) => {
     const div = document.createElement("div");
     div.className = "card";
     div.dataset.id = card.id;
-    div.textContent = card.id;
+
+    const img = document.createElement("img");
+    img.src = card.src;
+    img.alt = card.src;
+
+    div.appendChild(img);
     div.addEventListener("click", handleCardClick);
+
     DOMelements.cardContainer.appendChild(div);
   });
 }
+
 updateGame();

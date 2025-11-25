@@ -50,7 +50,6 @@ const cardManager = {
     { id: 11, isClicked: false },
     { id: 12, isClicked: false },
   ],
-
   currentScore: 0,
   highScore: 0,
 
@@ -85,33 +84,6 @@ const cardManager = {
     this.currentScore = 0;
     this.cards.forEach((card) => (card.isClicked = false));
     showGameOver();
-    update();
+    updateUI();
   },
 };
-function createCard(id) {
-  return {
-    id: id,
-    isClicked: false,
-
-    getId() {
-      return this.id;
-    },
-
-    setId(newId) {
-      this.id = newId;
-    },
-
-    getIsClicked() {
-      return this.isClicked;
-    },
-
-    changeIsClicked() {
-      this.isClicked = !this.isClicked;
-    },
-  };
-}
-
-cards.forEach((cardData) => {
-  const newCard = createCard(cardData.id);
-  cardManager.addCard(newCard);
-});

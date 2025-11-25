@@ -73,7 +73,7 @@ const cardManager = {
     }
 
     this.shuffleCards();
-    updateUI();
+    updateGame();
   },
 
   shuffleCards() {
@@ -84,6 +84,27 @@ const cardManager = {
     this.currentScore = 0;
     this.cards.forEach((card) => (card.isClicked = false));
     showGameOver();
-    updateUI();
+    updateGame();
   },
 };
+
+function handleCardClick(e) {
+  const id = Number(e.target.dataset.id);
+  cardManager.clickCard(id);
+}
+function updateGame() {
+  DOMelements.currentScoreSpan.textContent = cardManager.currentScore;
+  DOMelements.highScoreSpan.textContent = cardManager.highScore;
+
+  DOMelements.cardContainer.innerHTML = "";
+
+  cardManager.cards.forEach((card) => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.dataset.id = card.id;
+    div.textContent = card.id;
+    div.addEventListener("click", handleCardClick);
+    DOMelements.cardContainer.appendChild(div);
+  });
+}
+updateGame();

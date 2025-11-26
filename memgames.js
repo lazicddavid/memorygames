@@ -20,6 +20,7 @@ const cardManager = {
     { id: 11, src: "snuffles.png", isClicked: false },
     { id: 12, src: "squanchy.png", isClicked: false },
   ],
+
   currentScore: 0,
   highScore: 0,
 
@@ -86,3 +87,6 @@ function updateGame() {
 }
 
 updateGame();
+
+//napraviti get elemente za current score i total score
+//staviti u areju UUUID i pozvati ga 12 puta

@@ -93,6 +93,6 @@ updateGame();
 
 
 
-getCaradById(id) {
+getCardById(id) {
   return this.cards.find((card) => card.id === id );
 }

@@ -91,8 +91,4 @@ updateGame();
 //napraviti get elemente za current score i total score
 //staviti u areju UUUID i pozvati ga 12 puta
 
-
-
-getCardById(id) {
-  return this.cards.find((card) => card.id === id );
-}
+const card = cardManager.getCardById(4);

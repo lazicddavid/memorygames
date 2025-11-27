@@ -28,6 +28,10 @@ const cardManager = {
     return this.cards.find((card) => card.id === id);
   },
 
+  getCardById(id) {
+    return this.cards.find((card) => card.id === id);
+  },
+
   clickCard(id) {
     const card = this.getCardById(id);
 

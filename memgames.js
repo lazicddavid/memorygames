@@ -28,10 +28,6 @@ const cardManager = {
     return this.cards.find((card) => card.id === id);
   },
 
-  getCardById(id) {
-    return this.cards.find((card) => card.id === id);
-  },
-
   clickCard(id) {
     const card = this.getCardById(id);
 
@@ -47,6 +43,9 @@ const cardManager = {
       this.highScore = this.currentScore;
     }
 
+    if (this.currentScore > this.highScore) {
+      this.highScore = this.currentScore;
+    }
     this.shuffleCards();
     updateGame();
   },

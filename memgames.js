@@ -31,14 +31,12 @@ const cardManager = {
   getCurrentScore() {
     return this.currentScoreValue;
   },
-
-  getTotalScore() {
-    return this.totalScoreValue;
-  }
-
+  get highScore() {
+    return this.highScoreValue;
+  },
 
   getCardById() {
-    return this.card.find(card => card.id === id);
+    return this.card.find((card) => card.id === id);
   },
 
   clickCard(id) {

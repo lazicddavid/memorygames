@@ -54,6 +54,7 @@ const cardManager = {
   gameOver() {
     this.currentScore = 0;
     this.cards.forEach((card) => (card.isClicked = false));
+    this.shuffleCards();
     updateGame();
   },
 };
@@ -90,5 +91,3 @@ updateGame();
 
 //napraviti get elemente za current score i total score
 //staviti u areju UUUID i pozvati ga 12 puta
-
-const card = cardManager.getCardById(4);

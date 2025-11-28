@@ -21,8 +21,8 @@ const cardManager = {
     { id: 12, src: "squanchy.png", isClicked: false },
   ],
 
-  currentScore: 0,
-  highScore: 0,
+  currentScoreValue: 0,
+  highScoreValue: 0,
 
   getCardById(id) {
     return this.cards.find((card) => card.id === id);
@@ -33,10 +33,6 @@ const cardManager = {
   },
   get highScore() {
     return this.highScoreValue;
-  },
-
-  getCardById() {
-    return this.card.find((card) => card.id === id);
   },
 
   clickCard(id) {

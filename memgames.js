@@ -36,6 +36,11 @@ const cardManager = {
     return this.totalScoreValue;
   }
 
+
+  getCardById() {
+    return this.card.find(card => card.id === id);
+  },
+
   clickCard(id) {
     const card = this.getCardById(id);
 

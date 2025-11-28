@@ -43,9 +43,6 @@ const cardManager = {
       this.highScore = this.currentScore;
     }
 
-    if (this.currentScore > this.highScore) {
-      this.highScore = this.currentScore;
-    }
     this.shuffleCards();
     updateGame();
   },
@@ -60,6 +57,15 @@ const cardManager = {
     updateGame();
   },
 };
+
+
+gameOver() {
+  this.currentScore = 0;
+  this.cards.forEach((card) => card.isClicked = falese);
+  updateGame();
+}
+
+
 
 function onCardClick(e) {
   const cardDiv = e.target.closest(".card");

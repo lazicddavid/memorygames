@@ -58,15 +58,6 @@ const cardManager = {
   },
 };
 
-
-gameOver() {
-  this.currentScore = 0;
-  this.cards.forEach((card) => card.isClicked = falese);
-  updateGame();
-}
-
-
-
 function onCardClick(e) {
   const cardDiv = e.target.closest(".card");
   if (!cardDiv) return;

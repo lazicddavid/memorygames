@@ -32,6 +32,10 @@ const cardManager = {
     return this.currentScoreValue;
   },
 
+  getTotalScore() {
+    return this.totalScoreValue;
+  }
+
   clickCard(id) {
     const card = this.getCardById(id);
 

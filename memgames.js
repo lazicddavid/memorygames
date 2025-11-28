@@ -28,6 +28,10 @@ const cardManager = {
     return this.cards.find((card) => card.id === id);
   },
 
+  getCurrentScore() {
+    return this.currentScoreValue;
+  },
+
   clickCard(id) {
     const card = this.getCardById(id);
 

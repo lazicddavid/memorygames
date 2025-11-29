@@ -5,6 +5,14 @@ const DOMelements = {
   cardContainer: document.querySelector(".card-container"),
 };
 
+function createCard(id, src) {
+  return {
+    id,
+    src,
+    isClicked: false,
+  };
+}
+
 const cardManager = {
   cards: [
     { id: 1, src: "abraham.png", isClicked: false },
@@ -20,19 +28,19 @@ const cardManager = {
     { id: 11, src: "snuffles.png", isClicked: false },
     { id: 12, src: "squanchy.png", isClicked: false },
   ],
-
   currentScoreValue: 0,
   highScoreValue: 0,
 
-  getCardById(id) {
-    return this.cards.find((card) => card.id === id);
-  },
-
-  getCurrentScore() {
+  get currentScore() {
     return this.currentScoreValue;
   },
+
   get highScore() {
     return this.highScoreValue;
+  },
+
+  getCardById(id) {
+    return this.cards.find((card) => card.id === id);
   },
 
   clickCard(id) {
@@ -44,10 +52,10 @@ const cardManager = {
     }
 
     card.isClicked = true;
-    this.currentScore++;
+    this.currentScoreValue++;
 
-    if (this.currentScore > this.highScore) {
-      this.highScore = this.currentScore;
+    if (this.currentScoreValue > this.highScoreValue) {
+      this.highScoreValue = this.currentScoreValue;
     }
 
     this.shuffleCards();
@@ -59,7 +67,7 @@ const cardManager = {
   },
 
   gameOver() {
-    this.currentScore = 0;
+    this.currentScoreValue = 0;
     this.cards.forEach((card) => (card.isClicked = false));
     this.shuffleCards();
     updateGame();

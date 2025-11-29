@@ -10,6 +10,12 @@ function createCard(id, src) {
     id,
     src,
     isClicked: false,
+    changeIsClicked() {
+      this.isClicked = !this.isClicked;
+    },
+    getId() {
+      return this.id;
+    },
   };
 }
 

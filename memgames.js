@@ -60,6 +60,7 @@ const cardManager = {
 
     if (card.isClicked) {
       this.gameOver();
+      showGameOverModal();
       return;
     }
 
@@ -85,6 +86,21 @@ const cardManager = {
     updateGame();
   },
 };
+
+function showGameOverModal() {
+  document.getElementById("gameOverModal").classList.remove("hidden");
+}
+
+function hideGameOverModal() {
+  document.getElementById("gameOverModal").classList.add("hidden");
+}
+
+document.getElementById("playAgainBtn").addEventListener("click", () => {
+  cardManager.highScoreValue = 0; //proba za reset HS
+  hideGameOverModal();
+  cardManager.gameOver();
+  updateGame();
+});
 
 function onCardClick(e) {
   const cardDiv = e.target.closest(".card");

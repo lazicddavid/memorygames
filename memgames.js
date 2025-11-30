@@ -96,7 +96,6 @@ function hideGameOverModal() {
 }
 
 document.getElementById("playAgainBtn").addEventListener("click", () => {
-  cardManager.highScoreValue = 0; //proba za reset HS
   hideGameOverModal();
   cardManager.gameOver();
   updateGame();

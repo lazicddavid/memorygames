@@ -97,8 +97,6 @@ function hideGameOverModal() {
 
 document.getElementById("playAgainBtn").addEventListener("click", () => {
   hideGameOverModal();
-  cardManager.gameOver();
-  updateGame();
 });
 
 function onCardClick(e) {
@@ -130,6 +128,3 @@ function updateGame() {
 }
 
 updateGame();
-
-//napraviti get elemente za current score i total score
-//staviti u areju UUUID i pozvati ga 12 puta

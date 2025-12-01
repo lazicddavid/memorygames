@@ -128,5 +128,3 @@ function updateGame() {
 }
 
 updateGame();
-
-DOMelements;
